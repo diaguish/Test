@@ -123,7 +123,7 @@ const slides = {
   const page = await browser.newPage({ viewport: { width: W, height: H } });
   for (const [name, body] of Object.entries(slides)) {
     const file = path.join(TMP, `etsy-${name}.html`);
-    fs.writeFileSync(file, `<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>${base}</style></head><body>${body}</body></html>`);
+    fs.writeFileSync(file, `<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>${base}</style></head><body>${body}<div style="position:absolute;left:80px;bottom:60px;font-family:'Playfair Display',serif;font-style:italic;font-size:52px;color:${C.accent};">SouParSou</div></body></html>`);
     await page.goto('file://' + file);
     await page.evaluate(() => document.fonts.ready);
     await page.screenshot({ path: path.join(OUT, `${name}.jpg`), type: 'jpeg', quality: 90 });

@@ -52,7 +52,7 @@ tr.total td { border-bottom: none; font-weight: 500; padding-top: 1.5mm; }
 
 const fields = (...labels) => `<div class="fields">${labels.map(l => `<div class="field"><span>${l}</span><i></i></div>`).join('')}</div>`;
 const lines = (n) => `<div class="lines">${'<i></i>'.repeat(n)}</div>`;
-const footer = (n) => `<div class="footer"><span>Kit Épargne Aesthetic</span><span>${String(n).padStart(2, '0')} / 08</span></div>`;
+const footer = (n) => `<div class="footer"><span>SouParSou · Kit Épargne</span><span>${String(n).padStart(2, '0')} / 08</span></div>`;
 const blobs = (a, b) => `<div class="blob" style="${a}"></div><div class="blob" style="${b}"></div>`;
 const header = (kicker, title, sub) => `<div class="kicker">${kicker}</div><h1>${title}</h1><div class="sub">${sub}</div>`;
 
@@ -84,7 +84,7 @@ const pages = [
         <div class="circle" style="width:7mm;height:7mm;flex:none;font-size:8pt;">${i + 1}</div>
         <div><b style="font-weight:500;">${b}</b> ${t}</div></div>`).join('')}
     </div>
-    <div style="text-align:center;margin-top:14mm;font-size:7.5pt;color:var(--muted);letter-spacing:.08em;">Usage personnel uniquement · Revente et partage interdits</div>
+    <div style="text-align:center;margin-top:14mm;font-size:7.5pt;color:var(--muted);letter-spacing:.08em;">Un kit <span style="font-family:'Playfair Display',serif;font-style:italic;font-size:10pt;color:var(--accent);letter-spacing:0;">SouParSou</span> · Usage personnel uniquement · Revente et partage interdits</div>
   </div>`,
 
   // 2. Défi 52 semaines
